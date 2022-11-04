@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+const box = document.createElement('div');
+box.classList.add('box');
 
 
 for (let i = 0; i < 256; i++) {
@@ -10,6 +12,13 @@ for (let i = 0; i < 256; i++) {
 }
 
 
-function etch() {
-    
-}
+
+const squares = document.querySelectorAll('.box')
+squares.forEach((square) => {
+    square.addEventListener('mouseenter', (etch))
+})
+
+function etch(e) {
+    e.target.style.backgroundColor = 'black';      
+        
+    }
