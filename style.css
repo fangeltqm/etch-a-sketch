@@ -40,8 +40,9 @@ h1 {
 }
 
 .change-size {
+    font-size: 20px;
     margin: 0.5em;
-    width: 90px;
+    width: 200px;
     align-self: center;
     background-color: #d80032;
     color: white;
@@ -57,5 +58,6 @@ h1 {
     background-color: #2b2d42;
     color: white;
     padding: 0.5em;
+    font-size: smaller;
 
 }
