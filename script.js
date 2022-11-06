@@ -2,15 +2,12 @@ const container = document.querySelector('.container');
 const box = document.createElement('div');
 box.classList.add('box');
 
-
 for (let i = 0; i < 256; i++) {
     const box = document.createElement('div');
     box.classList.add('box');
     container.appendChild(box);
     
 }
-
-
 
 const squares = document.querySelectorAll('.box')
 squares.forEach((square) => {
@@ -19,7 +16,7 @@ squares.forEach((square) => {
 
 function etch(e) {
     e.target.style.backgroundColor = 'black';      
-        
+
 }
 
 const sizeButton = document.querySelector('.change-size');
@@ -60,6 +57,9 @@ function changeSize () {
 }
 
 sizeButton.addEventListener('click', changeSize);
+
+
+
 
 
 
