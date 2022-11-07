@@ -20,12 +20,37 @@ function etch() {
     })
 }
 
+//shade pen
+const gray = document.querySelector('.shade');
+gray.addEventListener('click', (shade));
+function shade() {
+    const squares = document.querySelectorAll('.box');
+    squares.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            //let currentOpacity = ;
+            square.style.backgroundColor =`rgba(0,0,0, ${currentOpacity + 0.1})`;
+        })
+    })
+}
 
+//rainbow pen needs edit
+const rainbow = document.querySelector('.rainbow');
+rainbow.addEventListener('click', (magic));
+function magic() {
+    const squares = document.querySelectorAll('.box');
+    squares.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            square.style.backgroundColor = `rgba(${r},${g},${b})`;
+        })
+    })
+}
 
 
 
     
-
 const eraser = document.querySelector('.eraser');
 eraser.addEventListener('click', (erase));
 function erase() {
@@ -33,12 +58,9 @@ function erase() {
     squares.forEach((square) => {
         square.addEventListener('mouseenter', () => {
             square.style.backgroundColor ='white';
-        }
-        )
+        })
     })
 }
-
-
 
 const clear = document.querySelector('.clear');
 clear.addEventListener('click', () => {
@@ -48,12 +70,10 @@ clear.addEventListener('click', () => {
     })
 })
 
-
 const sizeButton = document.querySelector('.change-size');
 sizeButton.addEventListener('click', changeSize);
 function changeSize () {
     let gridSize = prompt("How many boxes on each side? (1-50)");
-    
     while (isNaN(gridSize) || gridSize < 1 || gridSize >50) {
         alert("You did not enter a number between 1-50")
         gridSize = prompt("Please choose a number between 1-50")
@@ -73,11 +93,5 @@ function changeSize () {
         let boxWidth= 500/gridSize;
         box.style.height = boxHeight +'px';
         box.style.width = boxWidth +'px';
-
     }
-
 }
-
-
-
-
