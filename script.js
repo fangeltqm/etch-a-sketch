@@ -9,15 +9,35 @@ for (let i = 0; i < 256; i++) {
     
 }
 
-const squares = document.querySelectorAll('.box')
-squares.forEach((square) => {
-    square.addEventListener('mouseenter', (etch))
-})
-
-function etch(e) {
-    e.target.style.backgroundColor = 'black';      
-
+const black = document.querySelector('.black');
+black.addEventListener('click', (etch));
+function etch() {
+    const squares = document.querySelectorAll('.box');
+    squares.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            square.style.backgroundColor = 'black'; 
+        })
+    })
 }
+
+
+
+
+
+    
+
+const eraser = document.querySelector('.eraser');
+eraser.addEventListener('click', (erase));
+function erase() {
+    const squares = document.querySelectorAll('.box');
+    squares.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            square.style.backgroundColor ='white';
+        }
+        )
+    })
+}
+
 
 
 const clear = document.querySelector('.clear');
@@ -27,14 +47,10 @@ clear.addEventListener('click', () => {
         box.style.backgroundColor = 'white';
     })
 })
-    
-
-
-
-
 
 
 const sizeButton = document.querySelector('.change-size');
+sizeButton.addEventListener('click', changeSize);
 function changeSize () {
     let gridSize = prompt("How many boxes on each side? (1-50)");
     
@@ -60,17 +76,8 @@ function changeSize () {
 
     }
 
-    const squares = document.querySelectorAll('.box')
-    squares.forEach((square) => {
-        square.addEventListener('mouseenter', (etch))
-    })
-
-    function etch(e) {
-        e.target.style.backgroundColor = 'black';      
-    }
-
 }
 
-sizeButton.addEventListener('click', changeSize);
+
 
 
