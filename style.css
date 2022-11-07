@@ -19,25 +19,32 @@ h1 {
 
 }
 
-.section {
-    display: flex;
-    
+button {
+    border-color: #d80032;
+    background-color: #ef233c;
+    color: white;
+    border-radius: 8px;
+    padding: 2px 10px;
+    border-style: solid;
 
 }
 
+button:hover {
+    background-color: white;
+    color: #2b2d42;
+}
+
+
 .controls {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
     margin: 0 14em;
 }
 
 .controls button{
     
-    background-color: #d80032;
-    color: white;
-    border-radius: 8px;
-    padding: 2px 10px;
+   
     
 
 }
@@ -63,12 +70,7 @@ h1 {
 }
 
 .change-size {
-    width: 200px;
     align-self: center;
-    background-color: #d80032;
-    color: white;
-    border-radius: 8px;
-    padding: 2px;
     
 }
 
@@ -79,6 +81,6 @@ h1 {
     background-color: #2b2d42;
     color: white;
     padding: 0.5em;
-    font-size: smaller;
+    font-size: 13px;
 
 }

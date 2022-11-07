@@ -19,6 +19,21 @@ function etch(e) {
 
 }
 
+
+const clear = document.querySelector('.clear');
+clear.addEventListener('click', () => {
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach((box) => {
+        box.style.backgroundColor = 'white';
+    })
+})
+    
+
+
+
+
+
+
 const sizeButton = document.querySelector('.change-size');
 function changeSize () {
     let gridSize = prompt("How many boxes on each side? (1-50)");
@@ -32,7 +47,7 @@ function changeSize () {
         container.removeChild(container.firstChild);
     }
 
-    let numberOfBoxes = gridSize * gridSize
+    let numberOfBoxes = gridSize * gridSize;
     
     for (let i=0; i<numberOfBoxes; i++) {
         const box = document.createElement('div');
@@ -51,15 +66,11 @@ function changeSize () {
     })
 
     function etch(e) {
-        e.target.style.backgroundColor = 'black';           
-    };
+        e.target.style.backgroundColor = 'black';      
+    }
 
 }
 
 sizeButton.addEventListener('click', changeSize);
-
-
-
-
 
 
