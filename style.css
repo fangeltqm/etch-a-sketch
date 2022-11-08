@@ -34,19 +34,11 @@ button:hover {
     color: #2b2d42;
 }
 
-
 .controls {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0 14em;
-}
-
-.controls button{
-    
-   
-    
-
+    justify-content: space-between;
+    gap: 50px;
+    margin: 0 auto;
 }
 
 .container {
@@ -66,6 +58,7 @@ button:hover {
     border-color: lightgray;
     height: 31.25px;
     width: 31.25px;
+    background-color: rgb(255, 255, 255);
 
 }
 
